@@ -4,6 +4,8 @@
 #include <stdbool.h>	/* bool, true, false */
 #include <string.h>     /* strcmp */
 
+#include <unistd.h>		/* sleep */
+
 #include "main.h"
 
 int main (int argc, char* argv[]) {
@@ -54,7 +56,8 @@ int main (int argc, char* argv[]) {
 			break;
 		}
 
-		printf("\n");
+		printf("\r");
+		fflush(stdout);
 		sleep(1);
 	};
 	
