@@ -31,7 +31,7 @@ int main (int argc, char* argv[]) {
 	}
 
 
-	time(&now);  /* get current time; same as: timer = time(NULL)  */
+	time(&now);  /* get current time; same as: now = time(NULL)  */
 	
 	morning = localtime(&now);
 	morning->tm_sec = 0;
