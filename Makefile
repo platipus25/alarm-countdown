@@ -1,5 +1,10 @@
 CC=gcc
 CFLAGS=-I -Wall
+DEPS := alrm.h
+OBJ := main.o alrm.o
 
-alarm-countdown: main.c
-	$(CC) -o alarm-countdown main.c
+%.o: %.c $(DEPS)
+	$(CC) -c -o $@ $< $(CFLAGS)
+
+alarm-countdown: $(OBJ)
+	$(CC) -o $@ $^
