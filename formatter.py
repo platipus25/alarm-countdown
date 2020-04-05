@@ -2,7 +2,7 @@ import math
 import datetime
 # ideas for formatter
 
-FLOATING_POINT_SECONDS = True;
+FLOATING_POINT_SECONDS = True
 
 def gen(hours = 0, minutes = 0, seconds = 0, ms = 0):
     return (hours   * 60**2
