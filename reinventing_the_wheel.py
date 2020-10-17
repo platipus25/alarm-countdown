@@ -1,4 +1,3 @@
-from datetime import datetime, timedelta
 # ideas for formatter
 
 def now():
@@ -39,13 +38,17 @@ def time_until(hours = 0, minutes = 0, seconds = 0):
 def time_until_string(stringIn):
     return time_until(*[float(i) for i in stringIn.split(":")])
 
-def parse_date(ms):
-    return datetime.datetime.fromtimestamp(ms)
 
-def parse_parse(tm):
-    return timedelta(hours=tm[0], minutes=tm[1], seconds=tm[2])
 
 if __name__ == "__main__":
+
+  from datetime import datetime, timedelta
+  def parse_date(ms):
+    return datetime.datetime.fromtimestamp(ms)
+
+  def parse_parse(tm):
+    return timedelta(hours=tm[0], minutes=tm[1], seconds=tm[2])
+
   sec = int(mktime(5, 2, 1))
   
   print(sec)
